@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import BodybuilderInfo from "./BodyBuilderInfo";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import DataDashboard from "./DataDashboard";
 
 const App = () => {
   return (
@@ -25,6 +26,10 @@ const App = () => {
           <Route
             path="/bodybuilder/ronnie-coleman"
             element={<BodybuilderInfo id="ronnie-coleman" />}
+          />
+          <Route
+            path="/dashboard"
+            element={<DataDashboard />}
           />
         </Routes>
       </Router>

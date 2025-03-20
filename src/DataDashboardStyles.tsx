@@ -4,6 +4,25 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 24px;
 `;
+export const ViewToggle = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+`;
+
+export const ToggleButton = styled.button<{ active: boolean }>`
+  padding: 8px 16px;
+  background-color: ${props => props.active ? '#3b82f6' : 'white'};
+  color: ${props => props.active ? 'white' : '#374151'};
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  
+  &:hover {
+    background-color: ${props => props.active ? '#2563eb' : '#f9fafb'};
+  }
+`;
 
 export const Header = styled.div`
   display: flex;

@@ -4,6 +4,7 @@ import BodybuilderInfo from "./BodyBuilderInfo";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import DataDashboard from "./DataDashboard";
+import Card from "./Card";
 
 const App = () => {
   return (
@@ -13,7 +14,11 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<h2>Welcome to Gains.com! Click a name to learn more.</h2>}
+            element={
+              <Card title="Welcome to Gains.com!">
+                Click a name to learn more.
+              </Card>
+            }
           />
           <Route
             path="/bodybuilder/jay-cutler"
@@ -28,9 +33,10 @@ const App = () => {
             element={<BodybuilderInfo id="ronnie-coleman" />}
           />
           <Route
-            path="/dashboard"
-            element={<DataDashboard />}
+            path="/bodybuilder/arnold-schwarzenegger"
+            element={<BodybuilderInfo id="arnold-schwarzenegger" />}
           />
+          <Route path="/dashboard" element={<DataDashboard />} />
         </Routes>
       </Router>
     </Provider>

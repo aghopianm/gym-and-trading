@@ -6,7 +6,7 @@ const COINCAP_API_BASE = "https://api.coincap.io/v2";
 // Fetch cryptocurrency data from CoinCap API
 export const fetchCryptoData = async (): Promise<CryptoData[]> => {
   try {
-    const response = await axios.get(`${COINCAP_API_BASE}/assets?limit=10`);
+    const response = await axios.get(`${COINCAP_API_BASE}/assets`);
     
     if (response.data && response.data.data) {
       // Transform the API response to match our CryptoData interface

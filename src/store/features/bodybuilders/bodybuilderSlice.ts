@@ -15,7 +15,8 @@ const initialState: BodybuilderState = {
   entities: {
     "jay-cutler": { likes: 0 },
     "rich-piana": { likes: 0 },
-    "ronnie-coleman": { likes: 0 }
+    "ronnie-coleman": { likes: 0 },
+    "arnold-schwarzenegger": { likes: 0 }
   }
 };
 
